@@ -7,7 +7,6 @@ public class test {
         lowerToUpper("s");
     }
     
-
     public static void lowerToUpper(String s){
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < s.length(); i++){
