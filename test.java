@@ -5,6 +5,10 @@ public class test {
         System.out.println(tc2());
         System.out.println(tc3());
         System.out.println(tc4());
+        System.out.println(tc5());
+        System.out.println(tc6());
+        //System.out.println(tc7());
+        System.out.println(tc8());
     }
 
     public static String lowerToUpper(String s) {
@@ -83,6 +87,53 @@ public class test {
         String input = "Hello123 ";
         String result = lowerToUpper(input);
         if (expected.equals(result)) {
+            return true;
+        }
+        return false;
+    }
+
+    /*Test case to check conversion of a string that also has numbers */
+    public static boolean tc5()
+    {
+        String expected = "HELLO123";
+        String input = "Hello123 ";
+        String result = lowerToUpper(input);
+        if (expected.equals(result)) {
+            return true;
+        }
+        return false;
+    }
+
+    /*Test case for null value */
+    public static boolean tc6()
+    {
+        String expected = " ";
+        String input = null;
+        String result = lowerToUpper(input);
+        if (expected.equals(result)) {
+            return true;
+        }
+        return false;
+    }
+
+    /*Test ase for entering only numbers */
+    public static boolean tc7(){
+        String expected = "Error message";
+        Integer input = 123;
+        String result = lowerToUpper(input);
+        if(expected.equals(result))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    /*Test case for empty string */
+    public static boolean tc8(){
+        String expected = null;
+        String result = null;
+        String res = lowerToUpper(result);
+        if (expected.equals(res)) {
             return true;
         }
         return false;
